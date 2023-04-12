@@ -1,0 +1,52 @@
+app:
+  appName: test
+  namespace: frontend
+  environment: prod
+  team: frontend
+
+  image:
+    registry: docker.io
+    name: reisraff/fqs
+    tag: latest
+    pullPolicy: IfNotPresent
+    containerPort: 3000
+
+  logs:
+    enabled: false
+
+  ingress:
+    scheme: public
+    name: test-public
+    additionalHostnames: []
+    paths:
+    - /
+
+  service:
+    enabled: true
+    type: NodePort
+    port: 80
+
+  resources:
+    limits:
+      cpu: 300m
+      memory: 300Mi
+    requests:
+      cpu: 200m
+      memory: 200Mi
+
+  autoscaling:
+    enabled: false
+    minReplicas: 1
+    maxReplicas: 1
+    targetCPUUtilizationPercentage:
+    targetMemoryUtilizationPercentage:
+
+  livenessProbe:
+    enabled: true
+    http:
+      path: /
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    timeoutSeconds: 3
+    successThreshould: 1
+    failureThreshould: 3
