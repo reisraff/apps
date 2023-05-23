@@ -15,6 +15,7 @@ app:
     enabled: false
 
   ingress:
+    domain: fqs.reisraff.local
     scheme: public
     name: test-public
     additionalHostnames: []
