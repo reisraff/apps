@@ -11,6 +11,9 @@ app:
     pullPolicy: IfNotPresent
     containerPort: 3000
 
+  env:
+    TEST: "foo"
+
   logs:
     enabled: false
 
