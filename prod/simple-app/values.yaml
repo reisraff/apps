@@ -6,7 +6,7 @@ app:
 
   image:
     registry: docker.io
-    name: reisraff/fqs
+    name: reisraff/test
     tag: latest
     pullPolicy: IfNotPresent
     containerPort: 3000
