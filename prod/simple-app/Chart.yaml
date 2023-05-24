@@ -7,5 +7,5 @@ description: simple app to see how this will work
 
 dependencies:
 - name: app
-  version: "0.5.0"
+  version: "0.6.0"
   repository: https://reisraff.github.io/helm-charts/

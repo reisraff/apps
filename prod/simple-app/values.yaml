@@ -12,7 +12,8 @@ app:
     containerPort: 3000
 
   env:
-    TEST: "foo"
+    private:
+      TEST: frontend_prod_test_test-env
 
   logs:
     enabled: false
